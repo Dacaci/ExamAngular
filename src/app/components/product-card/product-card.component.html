@@ -1,0 +1,32 @@
+<div class="product-card">
+  <div class="product-image">
+    <img [src]="article.image" [alt]="article.title" />
+    @if (hasDiscount) {
+      <div class="discount-badge">
+        -{{ (article.discountPercent * 100) | number:'1.0-0' }}%
+      </div>
+    }
+  </div>
+  
+  <div class="product-content">
+    <h3 class="product-title">{{ article.title }}</h3>
+    <p class="product-description">{{ article.description }}</p>
+    
+    <div class="product-features">
+      @for (feature of article.features; track feature.title) {
+        <span class="feature">{{ feature.title }}</span>
+      }
+    </div>
+    
+    <div class="product-price">
+      <span class="current-price">{{ discountedPrice | currency:'EUR':'symbol':'1.2-2' }}</span>
+      @if (hasDiscount) {
+        <span class="original-price">{{ article.fullPrice | currency:'EUR':'symbol':'1.2-2' }}</span>
+      }
+    </div>
+    
+    <button class="add-to-cart-btn" (click)="addToCart()">
+      Ajouter au panier
+    </button>
+  </div>
+</div>

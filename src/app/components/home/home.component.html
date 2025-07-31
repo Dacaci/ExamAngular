@@ -1,0 +1,57 @@
+<div class="home-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Spécialiste Climatisation & Ventilation</h1>
+      <p>Découvrez notre gamme complète d'équipements de climatisation et de ventilation pour votre confort optimal.</p>
+      <a routerLink="/catalog" class="cta-button">Voir le catalogue</a>
+    </div>
+  </section>
+
+  <section class="company-info">
+    <div class="container">
+      <h2>Notre Expertise</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">🏢</div>
+          <h3>Professionnels</h3>
+          <p>Solutions adaptées aux entreprises et particuliers</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">⚡</div>
+          <h3>Économique</h3>
+          <p>Équipements haute performance énergétique</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🛠️</div>
+          <h3>Installation</h3>
+          <p>Service d'installation et maintenance inclus</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-products">
+    <div class="container">
+      <h2>Produits en Promotion</h2>
+      
+      @if (loading) {
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Chargement des produits...</p>
+        </div>
+      }
+      
+      @if (!loading) {
+        <div class="products-grid">
+          @for (product of featuredProducts; track product.id) {
+            <app-product-card [article]="product"></app-product-card>
+          }
+        </div>
+      }
+      
+      <div class="view-all">
+        <a routerLink="/catalog" class="view-all-btn">Voir tous les produits</a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,132 @@
+/* Catalogue simple */
+.catalog-container {
+  background-color: white;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+  font-size: 24px;
+}
+
+.catalog-content {
+  display: block;
+}
+
+.filters-sidebar {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.filters-sidebar h3 {
+  margin-bottom: 20px;
+  color: black;
+  font-size: 18px;
+}
+
+.filters-form {
+  display: block;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  font-weight: bold;
+  color: black;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input[type="number"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+}
+
+.reset-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reset-btn:hover {
+  background-color: #888;
+}
+
+.products-section {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.results-header {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+.results-header h2 {
+  margin: 0;
+  color: black;
+  font-size: 18px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #ddd;
+  border-top: 3px solid #333;
+  margin: 0 auto 15px;
+}
+
+.products-grid {
+  display: block;
+  padding: 20px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* Version mobile simple */
+@media (max-width: 600px) {
+  .filters-sidebar {
+    margin-bottom: 20px;
+  }
+}
